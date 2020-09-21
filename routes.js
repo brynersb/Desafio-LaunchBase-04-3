@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = express.Router()
+const teachers = require('./teachers')
 
 routes
     .get("/", function (req, res) {
@@ -14,9 +15,7 @@ routes
         return res.render("./teachers/create")
     })
 
-    .post("/teachers/", function (req, res) {
-        return res.send("Recebido")
-    })
+    .post("/teachers/", teachers.post)
 
     .get("/studants", function (req, res) {
 
