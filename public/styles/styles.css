@@ -3,8 +3,9 @@
 
 :root {
     --primary-color: #504ec0;
-    --secundary-color: #d3f53d;
+    --secundary-color: #e4fc0e;
     --color-green: #47f741;
+    --color-green2: #47f74180;
     
 
     
@@ -142,4 +143,37 @@ header nav a:hover::after{
 
 .details .item div:nth-child(1){
     text-decoration: underline;
+}
+
+/* === form === */
+
+input {
+    width: 100%;
+    outline: none;
+    border:0;
+}
+
+select{
+    border:0
+}
+
+input[type="radio"],
+[type="date"]{
+    width: initial;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+input::placeholder{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"]{
+    padding: 8px 20px;
+    background-color: var(--color-green2);
+    border-radius: 4px ;
+    margin-top: 16px;
+    width: 100%;
+    cursor: pointer;
 }

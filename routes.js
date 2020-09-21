@@ -3,11 +3,19 @@ const routes = express.Router()
 
 routes
     .get("/", function (req, res) {
-        return res.redirect("teacher")
+        return res.redirect("/teachers")
     })
 
-    .get("/teacher", function (req, res) {
-        return res.render("teacher")
+    .get("/teachers/", function (req, res) {
+        return res.render("./teachers/teacher")
+    })
+
+    .get("/teachers/create", function (req, res) {
+        return res.render("./teachers/create")
+    })
+
+    .post("/teachers/", function (req, res) {
+        return res.send("Recebido")
     })
 
     .get("/studants", function (req, res) {
