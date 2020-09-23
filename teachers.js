@@ -12,6 +12,7 @@ exports.post = function (req, res) {
         }
     }
 
+    req.body.creted_at = Date.now()
 
     data.teachers.push(req.body)
 
